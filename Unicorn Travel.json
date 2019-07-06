@@ -1,0 +1,135 @@
+{
+  "luis_schema_version": "3.2.0",
+  "versionId": "0.1",
+  "name": "Unicorn Travel",
+  "desc": "Demo",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "intents": [
+    {
+      "name": "BookTicket"
+    },
+    {
+      "name": "CancelTicket"
+    },
+    {
+      "name": "Greeting"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [
+    {
+      "name": "AgeCategory",
+      "roles": [
+        "Adult",
+        "Infant",
+        "Kid"
+      ]
+    },
+    {
+      "name": "Airline",
+      "roles": []
+    },
+    {
+      "name": "RNR",
+      "roles": []
+    },
+    {
+      "name": "TravelClass",
+      "roles": [
+        "Business",
+        "Economic"
+      ]
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [
+    {
+      "name": "datetimeV2",
+      "roles": []
+    },
+    {
+      "name": "geographyV2",
+      "roles": []
+    },
+    {
+      "name": "number",
+      "roles": []
+    }
+  ],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [],
+  "utterances": [
+    {
+      "text": "book me 3 tickets in economy class for 2 adults and one child",
+      "intent": "BookTicket",
+      "entities": [
+        {
+          "entity": "TravelClass",
+          "role": "Economic",
+          "startPos": 21,
+          "endPos": 27
+        },
+        {
+          "entity": "AgeCategory",
+          "role": "Adult",
+          "startPos": 41,
+          "endPos": 46
+        },
+        {
+          "entity": "AgeCategory",
+          "role": "Kid",
+          "startPos": 56,
+          "endPos": 60
+        }
+      ]
+    },
+    {
+      "text": "hello",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "hey",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "hi",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "i need a plane ticket for next monday to mexico",
+      "intent": "BookTicket",
+      "entities": []
+    },
+    {
+      "text": "i need to cancel the ticket with this rnr",
+      "intent": "CancelTicket",
+      "entities": []
+    },
+    {
+      "text": "i would like to travel to london around 15th may.",
+      "intent": "BookTicket",
+      "entities": []
+    },
+    {
+      "text": "reserve me a ticket to santo domingo",
+      "intent": "BookTicket",
+      "entities": []
+    },
+    {
+      "text": "what's up?",
+      "intent": "Greeting",
+      "entities": []
+    }
+  ],
+  "settings": []
+}
